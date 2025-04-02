@@ -444,23 +444,24 @@ The project is organized into eight progressive phases, each building upon the p
 - **Red Team Focus**: Custom C2 channel implementation
 - **Red Team Focus**: DNS tunneling and exfiltration techniques
 
-### Phase 6: Reverse Engineering
-*Understanding code analysis*
-- Binary analysis basics
-- Disassembly techniques
-- API hooking
-- Code analysis tools
-- **Red Team Focus**: Identifying and bypassing security controls
-- **Red Team Focus**: DLL proxying and function hooking
+### Phase 6: Advanced Memory Management
+*Memory manipulation and security*
+- Memory allocation and deallocation
+- Heap and stack memory management
+- Memory corruption vulnerabilities
+- Binary analysis and reverse engineering
+- **Red Team Focus**: Process injection techniques
+- **Red Team Focus**: DLL proxying
 
-### Phase 7: Exploit Development
-*Understanding vulnerabilities*
-- Common vulnerability types
-- Exploit techniques
-- Mitigation strategies
-- Responsible disclosure
+### Phase 7: Windows API Programming
+*Windows API for security applications*
+- Windows API fundamentals
+- Process and thread management
+- Dynamic-link libraries (DLLs)
+- API hooking and unhooking
+- **Red Team Focus**: Windows API internals
+- **Red Team Focus**: Direct syscall implementation
 - **Red Team Focus**: In-memory exploitation techniques
-- **Red Team Focus**: Process injection methods
 - **Red Team Focus**: Shellcode development and optimization
 
 ### Phase 8: AV/EDR Evasion
@@ -470,6 +471,7 @@ The project is organized into eight progressive phases, each building upon the p
 - Code injection methods
 - Process hollowing
 - Sandbox evasion techniques
+- Custom loaders and shellcode
 - **Red Team Focus**: AMSI bypass techniques
 - **Red Team Focus**: ETW/Sysmon evasion
 - **Red Team Focus**: Living-off-the-land binary (LOLBin) utilization

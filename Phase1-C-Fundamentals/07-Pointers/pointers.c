@@ -15,7 +15,8 @@ void demonstrate_basic_pointers() {
     
     // Declare and initialize variables
     int value = 42;
-    int *ptr = &value;  // Pointer to value
+    int *ptr = &value;  // Pointer to value. & means "address of"
+    int **ptr_to_ptr = &ptr;  // Pointer to pointer
     
     // Print variable and pointer information
     printf("Variable value: %d\n", value);
