@@ -116,15 +116,15 @@ bool EnableHook()
     std::cout << "[+] Original MessageBoxA address: " << g_originalFunction << std::endl;
 
     // Save the original bytes for later restoration
-    memcpy(g_originalBytes, g_originalFunction, 5);
+    memcpy(g_originalBytes, (const void*)g_originalFunction, 5);
 
     std::cout << "[+] Original bytes: ";
-    PrintMemory(g_originalFunction, 5);
+    PrintMemory((void*)g_originalFunction, 5);
 
     // Calculate the relative address for the JMP instruction
     // JMP instruction uses relative addressing: target = current + 5 + offset
     // So offset = target - current - 5
-    DWORD offset = (DWORD)((BYTE *)HookedMessageBoxA - (BYTE *)g_originalFunction - 5);
+    DWORD offset = (DWORD)((uintptr_t)HookedMessageBoxA - (uintptr_t)g_originalFunction - 5);
 
     // Prepare the JMP instruction (E9 = JMP opcode, followed by 4-byte offset)
     BYTE patch[5] = {0xE9, 0x00, 0x00, 0x00, 0x00};

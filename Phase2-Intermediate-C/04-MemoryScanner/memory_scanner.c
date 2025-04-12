@@ -91,8 +91,7 @@ int add_match_result(PatternScanner *scanner, void *address, size_t offset) {
 }
 
 // Function to scan memory for a byte pattern
-void scan_memory_for_pattern(MemoryRegion *region, const uint8_t *pattern, 
-                           size_t pattern_size, PatternScanner *scanner) {
+void scan_memory_for_pattern(MemoryRegion *region, const uint8_t *pattern, size_t pattern_size, PatternScanner *scanner) {
     if (region == NULL || pattern == NULL || pattern_size == 0 || scanner == NULL) {
         return;
     }
@@ -111,8 +110,7 @@ void scan_memory_for_pattern(MemoryRegion *region, const uint8_t *pattern,
 }
 
 // Function to scan memory for a string pattern
-void scan_memory_for_string(MemoryRegion *region, const char *string, 
-                          PatternScanner *scanner) {
+void scan_memory_for_string(MemoryRegion *region, const char *string, PatternScanner *scanner) {
     scan_memory_for_pattern(region, (const uint8_t*)string, strlen(string) + 1, scanner);
 }
 
